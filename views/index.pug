@@ -1,0 +1,24 @@
+html
+  head
+    title= title
+  body
+    h2= message
+    form(action='/', method='post')
+      input(type='number', value= num1, name='n1', placeholder='First Number')
+      br
+      input(type='number', value= num2, name='n2', placeholder='Second Number')
+      br
+      input(type="radio", name="operation", id='add', value='add', checked)
+      label(for="add") Add
+      br
+      input(type="radio", name="operation", id='mul', value='mul')
+      label(for="mul") Multiply
+      br
+      input(type="radio", name="operation", id='sub', value='sub')
+      label(for="sub") Subtract
+      br
+      input(type="radio", name="operation", id='div', value='div')
+      label(for="div") Divide
+      br
+      button(type='submit', name='Submit') Calculate
+    h3= result
